@@ -10,12 +10,17 @@ Download and activate the WordPress plugin as normal.
 
 In your theme header file, add the following line right after the opening <body> tag:
 
+```php
+<body>
 <?php cookie_consent_display(); ?>
+...
+```
 
 Content
 =======
 
 To restrict content based on cookie settings, you could do the following in your theme files:
+
 ```php
 <?php if( !isset($_COOKIE['google_cookies']) || $_COOKIE['google_cookies'] == 'enabled' ) { ?>
 <script type="text/javascript">
