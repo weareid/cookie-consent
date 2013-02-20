@@ -17,6 +17,7 @@ Content
 
 To restrict content based on cookie settings, you could do the following in your theme files:
 
+<code>
 <?php if( !isset($_COOKIE['google_cookies']) || $_COOKIE['google_cookies'] == 'enabled' ) { ?>
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -30,3 +31,4 @@ To restrict content based on cookie settings, you could do the following in your
   })();
 </script>
 <?php } ?>
+</code>
