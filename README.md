@@ -12,7 +12,11 @@ In your theme header file, add the following line right after the opening <body>
 
 ```php
 <body>
-<?php cookie_consent_display(); ?>
+<?php
+if(function_exists('cookie_consent_display')) {
+        cookie_consent_display();
+}
+?>
 ...
 ```
 
